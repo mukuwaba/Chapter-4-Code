@@ -29,7 +29,7 @@ public class Student {
     }
 //Set the student's Average.
     public void setAverage(double average) {
-       
+
         //validate that average is >(positive) 0.0 and <= 100.0; otherwise
         //keep instance variable average's default value (0,0)
         if (average > 0.0){
@@ -37,5 +37,30 @@ public class Student {
                 this.average = average; //take the value and assign it to the average
             }
         }
+    }//set average
+///////////////////
+    public double getAverage() {
+        return average;
+    }
+public String getLetterGrade(){ //letterGrade is a string, not an object
+        String letterGrade = ""; //null, so it can be set by the if statements
+        
+        //Map the letter grade to the average
+    if (average >= 90) {
+        letterGrade = "A";
+    }
+    else if(average>= 80.0){
+        letterGrade = "B";    
+    }
+    if (average >= 70) {
+        letterGrade = "C";
+    }
+    else if(average>= 60.0){
+        letterGrade = "D";        
+    }
+    else {
+        letterGrade = "F";
+    }
+    return letterGrade;
     }
 }//End Class: Student
